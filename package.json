@@ -1,0 +1,46 @@
+{
+	"name": "gistbook",
+	"version": "0.0.0",
+	"description": "Manage gists from command-line",
+	"license": "MIT",
+	"repository": "rjoydip/gistbook",
+	"author": {
+		"name": "Joydip Roy",
+		"email": "joydipand@gmail.com",
+		"url": "https://github.com/rjoydip"
+	},
+	"bin": {
+		"gistbook": "cli.js"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "nyc ava",
+		"global": "npm rm -g gistbook && npm i -g ."
+	},
+	"files": [
+		"index.js",
+		"cli.js"
+	],
+	"keywords": [
+		"cli",
+		"gist",
+		"gistbook"
+	],
+	"dependencies": {
+		"request": "^2.88.0",
+		"yargs": "^12.0.2"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"codecov": "^3.0.0",
+		"nyc": "^12.0.0"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	}
+}
